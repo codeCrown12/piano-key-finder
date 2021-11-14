@@ -22,7 +22,7 @@ function copyUrl(){
         timer: 2000,
         timerProgressBar: true
     }) 
-  }
+}
 
 
 function Controls(){
