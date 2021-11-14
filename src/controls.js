@@ -3,6 +3,7 @@ import sounds from "./musyngkite.json"
 import { useState } from "react";
 import Piano from "./piano";
 import Swal from 'sweetalert2'
+
 function copyUrl(){
     const value = "https://keyfinder.netlify.app/";
     var TempText = document.createElement("input");
@@ -75,7 +76,7 @@ function Controls(){
             <div className="me-4">
                 <p className="fw-bold text-center mb-1 p-color">SHARE 😁</p>
                 <div className="d-flex justify-content-center">
-                    <button className="btn btn-sm btn-outline-secondary" onClick= {copyUrl()}>Share <i className="fas fa-paper-plane"></i></button>
+                    <button className="btn btn-sm btn-outline-secondary" onClick= {()=>copyUrl()}>Share <i className="fas fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
