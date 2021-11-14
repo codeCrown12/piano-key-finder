@@ -2,7 +2,7 @@ import React from "react";
 import sounds from "./musyngkite.json"
 import { useState } from "react";
 import Piano from "./piano";
-
+import Swal from 'sweetalert2'
 function copyUrl(){
     const value = "https://keyfinder.netlify.app/";
     var TempText = document.createElement("input");
