@@ -3,6 +3,25 @@ import sounds from "./musyngkite.json"
 import { useState } from "react";
 import Piano from "./piano";
 
+function copyUrl(){
+    const value = "https://keyfinder.netlify.app/";
+    var TempText = document.createElement("input");
+    TempText.value = value;
+    document.body.appendChild(TempText);
+    TempText.select();
+    
+    document.execCommand("copy");
+    document.body.removeChild(TempText);
+    Swal.fire({
+        toast: 'true',
+        position: 'top-end',
+        title: "Url copied to clipboard!",
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true
+    }) 
+  }
 
 
 function Controls(){
@@ -56,7 +75,7 @@ function Controls(){
             <div className="me-4">
                 <p className="fw-bold text-center mb-1 p-color">SHARE 😁</p>
                 <div className="d-flex justify-content-center">
-                    <a className="btn btn-sm btn-outline-secondary" href="bobblenote.com">Share <i className="fas fa-paper-plane"></i></a>
+                    <button className="btn btn-sm btn-outline-secondary" onClick= {copyUrl()}>Share <i className="fas fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
